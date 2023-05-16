@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+    {% if password %}
+        <div>
+            <p>The password entered is: {{ password }}</p>
+            <p>Hashed password : {{ hashed }}</p>
+            <h3>Password comparison :</h3>
+            {% if result == "Matches" %}
+                <p>The passwords match</p>
+            {% else %}
+                <p>No Match</p>
+            {% endif %}
+        </div>
+    {% else %}
+        <div>
+            <p>No password entered yet.</p>
+        </div>
+    {% endif %}
+</body>
+</html>
